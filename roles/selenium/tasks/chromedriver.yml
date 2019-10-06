@@ -8,7 +8,7 @@
     dest={{ tmp_dir }}/chromedriver-{{ chromedriver_version }}.zip
 
 - name: install unzip
-  yum: name=unzip state=present
+  apt: name=unzip state=present
 
 - name: extract chromedriver from archive
   shell: unzip -o {{ tmp_dir }}/chromedriver-{{ chromedriver_version }}.zip -d {{ tmp_dir }}
